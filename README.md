@@ -15,32 +15,15 @@
 ## 测试步骤
 - 启动容器：`docker-compose up -d`
 - 路由配置：`cd test && bash init.sh`
-- 启动测试：`python start_test.py`
-
+- 启动测试：
+    - 测试通过APISIX代理NGINX(2 upstreams)：`python start_test.py`
+    - 直接测试后端Nginx(1upstream)：`python start_test_upstream.py`
 ## 结果预览
 - 机器环境：4核8G centos 7.2
 - 测试结果：
+
+### 测试通过APISIX代理NGINX(2 upstreams)
 ```
-[root@centos ~/apisix-latency-test/test]# ./start_test.py 
-cost: 11ms
-cost: 11ms
-cost: 14ms
-cost: 11ms
-cost: 12ms
-cost: 12ms
-cost: 18ms
-cost: 12ms
-cost: 16ms
-cost: 11ms
-cost: 15ms
-cost: 12ms
-cost: 12ms
-Latency stats:
-0ms: 9688
-0~2ms: 221
-5~10ms: 37
-2~5ms: 33
->10ms: 20
 [root@centos ~/apisix-latency-test/test]# ./start_test.py 
 cost: 12ms
 cost: 11ms
@@ -85,5 +68,24 @@ Latency stats:
 5~10ms: 28
 >10ms: 22
 ```
+
+### 直接测试后端Nginx(1upstream)
+```
+[root@centos ~/apisix-latency-test/test]# ./start_test_upstream.py 
+Latency stats:
+0ms: 9979
+2~5ms: 11
+0~2ms: 8
+5~10ms: 1
+>10ms: 0
+[root@centos ~/apisix-latency-test/test]# ./start_test_upstream.py 
+Latency stats:
+0ms: 9970
+0~2ms: 22
+2~5ms: 4
+5~10ms: 3
+>10ms: 0
+```
+
 ## 初步结论
 整个测试完全在本地完成，网络损耗可以忽略不计，但是从结果来看`APISIX`的耗时不是特别稳定，存在较大波动的现象，希望官方可以帮忙定位下问题出在哪，非常感谢！
