@@ -7,7 +7,7 @@
 这里整理到github，方便官方大佬帮忙定位，整体测试说明如下：
 
 ## 用例说明
-用例基于官方`example`改造：(https://github.com/apache/apisix-docker/tree/master/example)[https://github.com/apache/apisix-docker/tree/master/example]，改动如下：
+用例基于官方`example`改造：[https://github.com/apache/apisix-docker/tree/master/example](https://github.com/apache/apisix-docker/tree/master/example)，改动如下：
 - 删除不需要的启动项，只保留`apisix`、`etcd`和`nginx`；
 - `apisix`docker版本改为最新的`centos-2.10.2`;
 - Docker改为HOST网络模式
