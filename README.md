@@ -88,8 +88,8 @@ Latency stats:
 ```
 
 ## 抓包分析
-抓包命令：`tcpdump -iany -nn port 9080 or port 8000 or port 8001 -vvv -w start_test.cap`
-分析截图：
+- 抓包命令：`tcpdump -iany -nn port 9080 or port 8000 or port 8001 -vvv -w start_test.cap`
+- 分析截图：
 ![image](https://user-images.githubusercontent.com/9711651/143400924-e2c560bb-d2b8-4894-a0ea-4c60cedd8385.png)
 很明显后端Nginx耗时0.04ms，而APISIX耗时14ms。
 
