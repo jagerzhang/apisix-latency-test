@@ -31,7 +31,7 @@ if __name__ == "__main__":
             cost_result["5~10ms"] += 1
 
         elif cost_time >= 10:
-            cost_result[">10ms"] += 1
+            cost_result[">=10ms"] += 1
 
         if cost_time > 10:
             print("cost: {}ms".format(cost_time))
