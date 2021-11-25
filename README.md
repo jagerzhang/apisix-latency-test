@@ -23,20 +23,67 @@
 ```
 [root@centos ~/apisix-latency-test/test]# ./start_test.py 
 cost: 11ms
-cost: 12ms
-cost: 13ms
-cost: 12ms
 cost: 11ms
+cost: 14ms
 cost: 11ms
 cost: 12ms
-cost: 25ms
+cost: 12ms
+cost: 18ms
+cost: 12ms
+cost: 16ms
 cost: 11ms
+cost: 15ms
+cost: 12ms
 cost: 12ms
 Latency stats:
-0~2ms: 9941
-5~10ms: 24
-2~5ms: 17
->10ms: 17
+0ms: 9688
+0~2ms: 221
+5~10ms: 37
+2~5ms: 33
+>10ms: 20
+[root@centos ~/apisix-latency-test/test]# ./start_test.py 
+cost: 12ms
+cost: 11ms
+cost: 13ms
+cost: 11ms
+cost: 13ms
+cost: 22ms
+cost: 13ms
+cost: 15ms
+cost: 14ms
+cost: 13ms
+cost: 11ms
+cost: 13ms
+cost: 17ms
+cost: 12ms
+Latency stats:
+0ms: 9750
+0~2ms: 181
+5~10ms: 25
+2~5ms: 22
+>10ms: 21
+[root@centos ~/apisix-latency-test/test]# ./start_test.py 
+cost: 13ms
+cost: 11ms
+cost: 12ms
+cost: 15ms
+cost: 11ms
+cost: 11ms
+cost: 11ms
+cost: 11ms
+cost: 13ms
+cost: 14ms
+cost: 14ms
+cost: 11ms
+cost: 13ms
+cost: 13ms
+cost: 12ms
+Latency stats:
+0ms: 9726
+0~2ms: 191
+2~5ms: 32
+5~10ms: 28
+>10ms: 22
 ```
 ## 初步结论
 整个测试完全在本地完成，网络损耗可以忽略不计，但是从结果来看`APISIX`的耗时不是特别稳定，存在较大波动的现象，希望官方可以帮忙定位下问题出在哪，非常感谢！
