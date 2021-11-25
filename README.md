@@ -44,7 +44,7 @@ Latency stats:
 0~2ms: 181
 5~10ms: 25
 2~5ms: 22
->10ms: 21
+>=10ms: 21
 [root@centos ~/apisix-latency-test/test]# ./start_test.py 
 cost: 13ms
 cost: 11ms
@@ -66,7 +66,7 @@ Latency stats:
 0~2ms: 191
 2~5ms: 32
 5~10ms: 28
->10ms: 22
+>=10ms: 22
 ```
 
 ### 直接测试后端Nginx(1upstream)
@@ -77,14 +77,14 @@ Latency stats:
 2~5ms: 11
 0~2ms: 8
 5~10ms: 1
->10ms: 0
+>=10ms: 0
 [root@centos ~/apisix-latency-test/test]# ./start_test_upstream.py 
 Latency stats:
 0ms: 9970
 0~2ms: 22
 2~5ms: 4
 5~10ms: 3
->10ms: 0
+>=10ms: 0
 ```
 
 ## 抓包分析
