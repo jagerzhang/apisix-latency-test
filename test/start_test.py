@@ -8,6 +8,7 @@ def get_cost_time():
 
 if __name__ == "__main__":
     cost_result = {}
+    cost_result["0ms"] = 0
     cost_result["0~2ms"] = 0
     cost_result["2~5ms"] = 0
     cost_result["5~10ms"] = 0
@@ -17,7 +18,10 @@ if __name__ == "__main__":
         cost_time = get_cost_time()
         cost = "{}ms".format(cost_time)
 
-        if cost_time >= 0 and cost_time < 2:
+        if cost_time == 0:
+            cost_result["0ms"] += 1
+
+        elif cost_time >= 0 and cost_time < 2:
             cost_result["0~2ms"] += 1
         
         elif cost_time >= 2 and cost_time < 5:
