@@ -1,0 +1,22 @@
+{
+  "nodes": [
+    {
+      "host": "127.0.0.1",
+      "port": 8000,
+      "weight": 100
+    },
+    {
+      "host": "127.0.0.1",
+      "port": 8001,
+      "weight": 100
+    }
+  ],
+  "timeout": {
+    "connect": 6,
+    "send": 60,
+    "read": 60
+  },
+  "type": "roundrobin",
+  "scheme": "http",
+  "pass_host": "pass"
+}
