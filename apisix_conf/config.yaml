@@ -19,6 +19,15 @@ apisix:
     ip: "0.0.0.0"
     port: 9092
 
+nginx_config:
+  user: root
+  error_log: /dev/stdout
+  error_log_level:  error
+  enable_cpu_affinity: false
+
+  http:
+    enable_access_log: false        # enable access log or not, default true
+
 etcd:
   host:                           # it's possible to define multiple etcd hosts addresses of the same etcd cluster.
     - "http://127.0.0.1:2379"     # multiple etcd address
