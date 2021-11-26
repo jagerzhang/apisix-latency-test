@@ -12,11 +12,10 @@ if __name__ == "__main__":
     cost_result["0~2ms"] = 0
     cost_result["2~5ms"] = 0
     cost_result["5~10ms"] = 0
-    cost_result[">10ms"] = 0
+    cost_result[">=10ms"] = 0
     
     for i in range(1, 10000):
         cost_time = get_cost_time()
-        cost = "{}ms".format(cost_time)
 
         if cost_time == 0:
             cost_result["0ms"] += 1
